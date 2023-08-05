@@ -17,7 +17,7 @@ export function addNote({ name, category, content }) {
     id: generateId(),
     name,
     category,
-    created: new Date().toLocaleDateString(),
+    created: Date.now(),
     content,
     dates: '',
     archived: false,
