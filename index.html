@@ -14,41 +14,38 @@
 
       <section id="notes" class="py-5">
         <h2 class="mb-3 text-xl font-semibold text-teal-700 uppercase">
-          <!-- Notes header -->
-
           Notes
         </h2>
-        <div
-          class="flex items-center justify-center gap-2 p-3 mb-3 text-white bg-teal-700 rounded"
-        >
-          <div class="w-1/12"></div>
-          <p class="w-2/12">Name</p>
-          <p class="w-2/12">Created</p>
-          <p class="w-2/12">Category</p>
-          <p class="w-2/12">Content</p>
-          <p class="w-2/12">Dates</p>
-          <div id="notes-header-buttons" class="flex w-1/12 gap-3">
-            <button data-operation="notes-add">
-              <svg class="block w-4 h-4 fill-current">
-                <use href="./images/icons.svg#icon-add"></use>
-              </svg>
-            </button>
-            <button data-operation="notes-zip-all">
-              <svg class="block w-5 h-5 fill-current">
-                <use href="./images/icons.svg#icon-zip"></use>
-              </svg>
-            </button>
-            <button data-operation="notes-delete-all">
-              <svg class="block w-5 h-5 fill-current">
-                <use href="./images/icons.svg#icon-delete"></use>
-              </svg>
-            </button>
+        <div id="notes-table">
+          <div
+            class="flex items-center justify-center gap-2 p-3 mb-3 text-white bg-teal-700 rounded"
+          >
+            <div class="w-1/12"></div>
+            <p class="w-2/12">Name</p>
+            <p class="w-2/12">Created</p>
+            <p class="w-2/12">Category</p>
+            <p class="w-2/12">Content</p>
+            <p class="w-2/12">Dates</p>
+            <div class="flex w-1/12 gap-3">
+              <button data-operation="notes-add">
+                <svg class="block w-4 h-4 fill-current">
+                  <use href="./images/icons.svg#icon-add"></use>
+                </svg>
+              </button>
+              <button data-operation="notes-zip-all">
+                <svg class="block w-5 h-5 fill-current">
+                  <use href="./images/icons.svg#icon-zip"></use>
+                </svg>
+              </button>
+              <button data-operation="notes-delete-all">
+                <svg class="block w-5 h-5 fill-current">
+                  <use href="./images/icons.svg#icon-delete"></use>
+                </svg>
+              </button>
+            </div>
           </div>
+          <ul id="notes-list" class="flex flex-col gap-2 text-slate-700"></ul>
         </div>
-
-        <!-- Notes table -->
-
-        <ul id="notes-list" class="flex flex-col gap-2 text-slate-700"></ul>
       </section>
 
       <!-- Categories -->
@@ -57,9 +54,6 @@
         <h2 class="mb-3 text-xl font-semibold text-teal-700 uppercase">
           Categories
         </h2>
-
-        <!-- Categories header -->
-
         <div
           class="flex items-center justify-center gap-2 p-3 mb-3 text-white bg-teal-700 rounded"
         >
@@ -69,16 +63,13 @@
           <p class="w-3/12 text-center">Archived</p>
           <div class="w-1/12"></div>
         </div>
-
-        <!-- Categories table -->
-
         <ul
           id="categories-list"
           class="flex flex-col gap-2 text-slate-700"
         ></ul>
       </section>
 
-      <!-- Add note modal -->
+      <!-- Note modal -->
 
       <div
         id="note-modal"
@@ -91,8 +82,6 @@
 
           <form id="form" class="px-4">
             <div class="flex gap-2 mb-6">
-              <!-- Select category -->
-
               <label class="relative block">
                 <select
                   name="category"
@@ -110,23 +99,18 @@
                 >
               </label>
 
-              <!-- Enter name -->
-
               <label class="relative block w-full">
                 <input
                   required
                   name="name"
                   class="block w-full p-4 text-lg border rounded-md outline-none bg-slate-100 border-slate-400 focus:border-slate-700"
                 />
-
                 <span
                   class="absolute -top-1/4 left-[10px] px-2 text-md text-teal-700 font-semibold bg-slate-100"
                   >Name</span
                 >
               </label>
             </div>
-
-            <!-- Enter note -->
 
             <label class="relative block w-full mb-6">
               <textarea
@@ -135,12 +119,12 @@
                 name="content"
                 class="w-full p-4 text-lg border rounded-md outline-none resize-none bg-slate-100 border-slate-400 focus:border-slate-700"
               ></textarea>
-
               <span
                 class="absolute -top-[16px] left-[10px] px-2 text-md text-teal-700 font-semibold bg-slate-100"
                 >Note</span
               >
             </label>
+
             <div class="flex justify-center gap-3">
               <button
                 type="submit"
@@ -162,6 +146,7 @@
       </div>
 
       <!-- Archive modal -->
+
       <div
         id="arch-modal"
         class="fixed inset-0 hidden pt-10 bg-black bg-opacity-30"
@@ -171,8 +156,6 @@
         >
           <h2 class="px-4 py-3 mb-8 text-lg text-white bg-teal-700">Archive</h2>
           <div id="arch-table" class="px-4">
-            <!-- Archive table -->
-
             <div
               class="flex items-center justify-center gap-2 p-3 mb-3 text-white bg-teal-700 rounded"
             >
@@ -198,14 +181,10 @@
                 </button>
               </div>
             </div>
-
-            <!-- Notes table -->
-
             <ul
               id="arch-list"
               class="flex flex-col gap-2 mb-6 text-slate-700"
             ></ul>
-
             <div class="px-4">
               <div class="flex justify-center gap-3">
                 <button
@@ -220,6 +199,7 @@
         </div>
       </div>
     </main>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>

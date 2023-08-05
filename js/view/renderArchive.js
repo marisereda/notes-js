@@ -3,9 +3,6 @@ import { findDates, formatDate } from '../helpers.js';
 import * as notesStore from '../model/notesStore.js';
 import { getCategoryIcon } from '../model/categoriesStore.js';
 import * as categoriesStore from '../model/categoriesStore.js';
-import { addArchiveEvents } from '../handlers/addEvents.js';
-
-// ----------------------------------------------------------------
 
 export function renderArchive() {
   const currentCategory = categoriesStore.getCategoryCurrent();
@@ -18,8 +15,6 @@ export function renderArchive() {
   const html = notes.map((note) => getArchiveTemplate(note));
   elRefs.archive.list.innerHTML = html.join('\n');
 }
-
-// ----------------------------------------------------------------
 
 function getArchiveTemplate(note) {
   return `<li data-category="${note.category}" data-id="${note.id}"
@@ -52,13 +47,9 @@ function getArchiveTemplate(note) {
 </li>`;
 }
 
-// ----------------------------------------------------------------
-
 export function openModalArchive() {
   elRefs.archive.modal.classList.remove('hidden');
 }
-
-// ----------------------------------------------------------------
 
 export function closeModalArchive() {
   elRefs.archive.modal.classList.add('hidden');

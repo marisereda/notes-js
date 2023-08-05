@@ -27,7 +27,7 @@ function getCategoriesTemplate(category) {
     category
   )}</p>
   <div class="w-1/12 text-teal-700">
-    <button id="open-arch">
+    <button>
       <svg class="block w-5 h-5 fill-current">
         <use href="./images/icons.svg#icon-open"></use>
       </svg>

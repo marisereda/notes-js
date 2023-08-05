@@ -1,5 +1,3 @@
-// import { elRefs } from './js/handlers/refs.js';
-// import * as notes from './js/model/notesStore.js';
 import {
   addNotesListEvents,
   addNoteEvents,
@@ -13,5 +11,6 @@ addNotesListEvents();
 addNoteEvents();
 addCategoriesListEvents();
 addArchiveEvents();
+
 renderNotes();
 renderCategories();

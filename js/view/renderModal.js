@@ -18,8 +18,6 @@ export function openNoteModal(id) {
   elRefs.note.modal.classList.remove('hidden');
 }
 
-// ----------------------------------------------------------------
-
 export function closeNoteModal() {
   elRefs.note.modal.classList.add('hidden');
 }

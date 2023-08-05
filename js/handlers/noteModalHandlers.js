@@ -23,11 +23,3 @@ export function saveNote(e) {
   renderNotes();
   renderCategories();
 }
-
-// ----------------------------------------------------------------
-
-export function cancelSavingNote() {
-  closeNoteModal();
-}
-
-// // ----------------------------------------------------------------

@@ -1,4 +1,4 @@
-import { closeModalArchive, renderArchive } from '../view/renderArchive.js';
+import { renderArchive } from '../view/renderArchive.js';
 import { renderNotes } from '../view/renderNotes.js';
 import { renderCategories } from '../view/renderCategories.js';
 import * as notesStore from '../model/notesStore.js';
@@ -18,8 +18,8 @@ export function onClickArchTable(e) {
       renderNotes();
       renderCategories();
       renderArchive();
-
       break;
+
     case 'arch-delete-all':
       notesStore.deleteZipNotesFromCategory(
         categoriesStore.getCategoryCurrent()
@@ -28,12 +28,14 @@ export function onClickArchTable(e) {
       renderCategories();
       renderArchive();
       break;
+
     case 'arch-activate':
       notesStore.activateNote(archiveItem.dataset.id);
       renderNotes();
       renderCategories();
       renderArchive();
       break;
+
     case 'arch-delete':
       notesStore.deleteNote(archiveItem.dataset.id);
       renderNotes();
@@ -41,8 +43,4 @@ export function onClickArchTable(e) {
       renderArchive();
       break;
   }
-}
-
-export function closeArchive() {
-  closeModalArchive();
 }

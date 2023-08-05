@@ -5,6 +5,7 @@ import { openModalArchive } from '../view/renderArchive.js';
 export function openArchive(e) {
   const button = e.target.closest('button');
   const categoryItem = e.target.closest('li');
+
   if (!button) {
     return;
   }
