@@ -4,7 +4,6 @@ import * as notesStore from '../model/notesStore.js';
 import { getCategoryIcon } from '../model/categoriesStore.js';
 import * as categoriesStore from '../model/categoriesStore.js';
 import { addArchiveEvents } from '../handlers/addEvents.js';
-import { removeArchiveEvents } from '../handlers/removeEvents.js';
 
 // ----------------------------------------------------------------
 
@@ -57,12 +56,10 @@ function getArchiveTemplate(note) {
 
 export function openModalArchive() {
   elRefs.archive.modal.classList.remove('hidden');
-  addArchiveEvents();
 }
 
 // ----------------------------------------------------------------
 
 export function closeModalArchive() {
   elRefs.archive.modal.classList.add('hidden');
-  removeArchiveEvents();
 }
