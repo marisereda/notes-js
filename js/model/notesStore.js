@@ -1,4 +1,5 @@
 import { initialNotes } from '../constants.js';
+import { generateId } from '../helpers.js';
 
 let notes = [...initialNotes];
 let noteId;
@@ -13,7 +14,7 @@ export function getNoteId() {
 
 export function addNote({ name, category, content }) {
   notes.push({
-    id: Math.random() * 1000,
+    id: generateId(),
     name,
     category,
     created: new Date().toLocaleDateString(),
